@@ -1,6 +1,5 @@
 package org.example.dependencyinjection.controllers;
 
-import org.example.dependencyinjection.services.ConstructorGreetingServiceImpl;
 import org.example.dependencyinjection.services.GreetingService;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Controller;
