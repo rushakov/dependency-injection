@@ -1,13 +1,16 @@
 package org.example.dependencyinjection.controllers;
 
 import org.example.dependencyinjection.services.GreetingService;
+import org.example.dependencyinjection.services.SetterGreetingServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Controller;
 
 @Controller
 public class SetterInjectedController {
     private GreetingService greetingService;
 
+    @Qualifier("setterGreetingServiceImpl")
     @Autowired
     public void setGreetingService(GreetingService greetingService) {
         this.greetingService = greetingService;
